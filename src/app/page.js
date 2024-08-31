@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Card from "./components/Card";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import ScrollDown from "./components/ScrollDown"
 
 const countries = [
   {
@@ -39,7 +38,7 @@ export default function Home() {
           <h1 className="text-[2.5rem] leading-[1.1] font-extrabold tracking-tight text-center">Discover and Compare the <span className="text-gradient font-extrabold tracking-tight">Cost of Living</span> Worldwide</h1>
           <p className="text-center text-sm pt-10"><span className="font-bold">9,015,181</span> prices in <span className="font-bold">11,697</span> cities entered by <span className="font-bold">802,754</span> contributors</p>
         </div>
-        <FontAwesomeIcon icon={faChevronDown} className="absolute bottom-4 m-auto left-0 right-0 color-white h-8 cursor-pointer animate-bounce"/>
+        <ScrollDown />
       </div>
       <div id="main-content" className="flex flex-col gap-5 p-4">
         <div className="flex justify-between items-center flex-wrap">
