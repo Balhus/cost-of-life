@@ -3,27 +3,43 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background: #120F17;
+  --dark-1: #191723;
+  --dark-2: #2C2538;
+  --dark-3: #372E47;
+  --dark-4: #5D547C;
+  --text-white: #FFF;
+  --text-gradient: linear-gradient(140deg, rgba(93,84,124,1) 0%, rgba(158,142,210,1) 50%, rgba(169,153,226,.8) 72%);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
+    --background: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
+} */
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: var(--text-white);
+  background: var(--background);
+}
+
+.parent-element-to-video {
+  overflow: hidden;
+}
+video {
+  height: 100%;
+  width: 177.77777778vh; /* 100 * 16 / 9 */
+  min-width: 100%;
+  min-height: 56.25vw; /* 100 * 9 / 16 */
+  object-fit: cover;
+}
+
+.text-gradient{
+  background: var(--text-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @layer utilities {
